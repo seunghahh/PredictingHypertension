@@ -12,13 +12,13 @@ while True:
     sample_choice = int(input("Choose normal(0) or hypertension(1): "))
 
     if sample_choice == 0:
-        original_data = pd.read_csv('sample_normal.csv')
-        scaled_data = pd.read_csv('sample_normal_scaled.csv')
+        original_data = pd.read_csv('sample_data/sample_normal.csv')
+        scaled_data = pd.read_csv('sample_data/sample_normal_scaled.csv')
         break
 
     elif sample_choice == 1:
-        original_data = pd.read_csv('sample_hypertension.csv')
-        scaled_data = pd.read_csv('sample_hypertension_scaled.csv')
+        original_data = pd.read_csv('sample_data/sample_hypertension.csv')
+        scaled_data = pd.read_csv('sample_data/sample_hypertension_scaled.csv')
         break
 
     else:
