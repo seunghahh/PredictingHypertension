@@ -1,3 +1,5 @@
 # Predicting Hypertension
 
-The machine-learning model for predicting hypertension!
+This is the test code and the model for predicting hypertension.
+
+With "TestingWebsite.py" and sample data, you can test the model.
