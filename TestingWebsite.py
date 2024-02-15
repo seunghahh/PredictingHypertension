@@ -5,7 +5,7 @@ from sklearn.model_selection import KFold, cross_val_score, StratifiedKFold, tra
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.metrics import make_scorer, accuracy_score, balanced_accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, roc_auc_score, roc_curve, RocCurveDisplay, auc
 
-with open('adb_lr_model.pkl', 'rb') as f:
+with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 while True:
