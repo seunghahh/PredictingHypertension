@@ -10,7 +10,7 @@ def load_mat_data(file_name):
     arr_max = np.squeeze(contentsMat['arr_max'])
     return arr_max, arr_min
 
-def min_max_test_datasets(test_data, input_factor, arr_min, arr_max):    ###=== Copy Input Data
+def min_max_test_datasets(test_data, input_factor, arr_min, arr_max):
    
     ###=== Copy Input Data
     edit_data = test_data.copy()
@@ -32,12 +32,12 @@ def eval_model_ML(input_data, input_factor = 18):
     arr_max, arr_min = load_mat_data(script_dir + '/hypertension_norm.mat')
     input_data = min_max_test_datasets(input_data.copy(), input_factor, arr_min, arr_max)
 
-    ### Evaluation Model with DNN
+    ### Evaluation Model
     print('Evaluation with Testing')
-    #model = pickle.load(open(SavePath+'adb_lr_model.pkl', 'rb'))
+    
     with open(model_dir, 'rb') as f:
         model = pickle.load(f)
-    prediction = model.predict_proba(input_data)[:,1]#.squeeze()
+    prediction = model.predict_proba(input_data)[:,1]
     return prediction
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
